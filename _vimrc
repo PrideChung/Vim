@@ -48,13 +48,14 @@ call pathogen#helptags()
 "== pathogen ==============================================
 
 
-"自动透明  
+"========Vim半透明效果，需要vimtweak.dll支持
 au GUIEnter * call libcallnr("vimtweak.dll", "SetAlpha", 234)  
 "[html] view plaincopyprint?
 "几个更改alpha的快捷键  
 map <M-8> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 180) <CR>  
 map <M-9> <Esc>:call libcallnr("vimtweak.dll", "SetAlpha", 230) <CR>  
 map <M-0> <ESC>:call libcallnr("vimtweak.dll", "SetAlpha", 255) <CR>  
+
 
 """"""""""""""""""""""""""""""
 " Tag list (ctags)

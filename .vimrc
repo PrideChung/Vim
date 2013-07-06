@@ -74,7 +74,8 @@ set backspace=indent,eol,start
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
-set autoindent
+" set autoindent
+set si
 
 " Stop certain movements from always going to the first character of a line.
 " While this behaviour deviates from that of Vi, it does what most users
@@ -153,19 +154,28 @@ filetype on
 "------------------------------------------------------------
 
 "look and feel
-color railscasts
-set guifont=Monaco:h14
+" color zenburn
+" color blackboard
+color twilight
+set guifont=Menlo:h15
 set guioptions-=T
 
 """""""basic keymaps""""""""""""""""
 let mapleader=","
-" inoremap <j><k> <ESC>
-imap jk <ESC>
+inoremap jk <ESC>
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 map <D-/> <C-_><C-_>
-map <D-p> <C-p>
+nnoremap <leader>cd :lcd %:p:h<CR>
+nnoremap <SPACE> :
 """""""""""""""""""""""""""""""""""
 
 """"""plugin settings"""""""""""""""""""""
 
 call pathogen#infect() 
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+
 """""""""""""""""""""""""""""""""""
